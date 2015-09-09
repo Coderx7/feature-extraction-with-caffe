@@ -60,7 +60,7 @@ $ python feature_extract.py -i image_filenames.npy -o extracted_features.npy
 
 * Classification of Oxford-IIIT Pet Dataset using SVM  
 ```py
-> accuracy = skl.metrics.accuracy_score(test_labels, predicts)
+> accuracy = sklearn.metrics.accuracy_score(test_labels, predicts)
 > print(accuracy)
 0.829838709677  
 
