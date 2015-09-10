@@ -1,7 +1,5 @@
 caffe_root = '../'
 image_dir = caffe_root + "working/The Oxford-IIIT Pet Dataset/"
-import sys
-sys.path.insert(0, caffe_root + 'python')
 MEAN_FILE = caffe_root + 'python/caffe/imagenet/ilsvrc_2012_mean.npy'
 MODEL_FILE = caffe_root + 'models/bvlc_reference_caffenet/deploy_feature.prototxt'
 PRETRAINED = caffe_root + 'models/bvlc_reference_caffenet/bvlc_reference_caffenet.caffemodel'
@@ -15,6 +13,8 @@ parser.add_argument('-o', metavar='Outputs', type=str, default='features.npy',
                     help='npy filename wirtes extracted features in')
 args = parser.parse_args()
 
+import sys
+sys.path.insert(0, caffe_root + 'python')
 import caffe
 import numpy as np
 caffe.set_mode_cpu()
@@ -26,7 +26,6 @@ transformer.set_mean('data', np.load(MEAN_FILE).mean(1).mean(1))
 transformer.set_raw_scale('data', 255)
 transformer.set_channel_swap('data', (2,1,0))
 
-features = []
 IMAGE_FILES = np.load(args.i)
 N = len(IMAGE_FILES)
 net.blobs['data'].reshape(N,3,227,227)
@@ -35,5 +34,4 @@ for i in range(N):
     net.blobs['data'].data[i] = \
         transformer.preprocess('data', caffe.io.load_image(LOAD_IMAGE))
 net.forward()
-features = net.blobs[FEAT_LAYER].data
-np.save(args.o, features)
+np.save(args.o, net.blobs[FEAT_LAYER].data)
