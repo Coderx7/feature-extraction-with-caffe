@@ -39,19 +39,11 @@ layer {
 ```
 
 ## Usage  
-Make sure that the following locations (caffe_root, images, and model files) are correctly designated
-* feature_extract.py
-```py
-caffe_root = '../'
-image_dir = caffe_root + "working/The Oxford-IIIT Pet Dataset/"
-MEAN_FILE = caffe_root + 'python/caffe/imagenet/ilsvrc_2012_mean.npy'
-MODEL_FILE = caffe_root + 'models/bvlc_reference_caffenet/deploy_feature.prototxt'
-PRETRAINED = caffe_root + 'models/bvlc_reference_caffenet/bvlc_reference_caffenet.caffemodel'
-FEAT_LAYER = 'fc6wi'
-```
-You should prepare a '.npy' file contains image filenames in numpy.array  
+Make sure that the path to caffe_root (-g), images (-p) are correctly designated.  
+You should prepare a '.npy' file (-i) contains image filenames in numpy.array.  
+If you use a GPU, set the device ID (-g).
 ```shellsession
-$ python feature_extract.py -i image_filenames.npy -o extracted_features.npy
+$ python feature_extract.py -i image_filenames.npy -o extracted_features.npy -p images/ -g 0
 ```
 
 ## Examples  
