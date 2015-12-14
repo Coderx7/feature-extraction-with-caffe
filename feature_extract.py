@@ -1,8 +1,8 @@
-caffe_root = '../'
-path_to_img = caffe_root + "working/The Oxford-IIIT Pet Dataset/"
-mean = caffe_root + 'python/caffe/imagenet/ilsvrc_2012_mean.npy'
-deploy = caffe_root + 'models/bvlc_reference_caffenet/deploy_feature.prototxt'
-model = caffe_root + 'models/bvlc_reference_caffenet/bvlc_reference_caffenet.caffemodel'
+caffe_root = 'caffe/'
+path_to_img = "/images"
+mean        = caffe_root + 'python/caffe/imagenet/ilsvrc_2012_mean.npy'
+deploy      = caffe_root + 'models/bvlc_reference_caffenet/deploy_feature.prototxt'
+model       = caffe_root + 'models/bvlc_reference_caffenet/bvlc_reference_caffenet.caffemodel'
 feat_layer = 'fc6wi'
 
 import argparse
