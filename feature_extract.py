@@ -4,9 +4,9 @@ parser.add_argument('-c', metavar='path_to_caffe', type=str, default='caffe/',
                     help='path to Caffe')
 parser.add_argument('-p', metavar='path_to_img', type=str, default='',
                     help='path to image files')
-parser.add_argument('-i', metavar='filenames', type=str, default='filenames.npy',
+parser.add_argument('-i', metavar='image_filenames', type=str, default='filenames.npy',
                     help='npy filename containing image filenames')
-parser.add_argument('-o', metavar='features', type=str, default='features.npy',
+parser.add_argument('-o', metavar='features_filename', type=str, default='features.npy',
                     help='npy filename wirtes extracted features in')
 parser.add_argument('-g', metavar='gpu', type=int, default=-1,
                     help='GPU device ID (CPU if this negative)')
