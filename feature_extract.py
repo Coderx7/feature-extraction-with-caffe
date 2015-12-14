@@ -8,7 +8,7 @@ parser.add_argument('-i', metavar='filenames', type=str, default='filenames.npy'
                     help='npy filename containing image filenames')
 parser.add_argument('-o', metavar='features', type=str, default='features.npy',
                     help='npy filename wirtes extracted features in')
-parser.add_argument('-g', metavar='gpu', type=str, default=-1,
+parser.add_argument('-g', metavar='gpu', type=int, default=-1,
                     help='GPU device ID (CPU if this negative)')
 args = parser.parse_args()
 
