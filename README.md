@@ -39,11 +39,11 @@ layer {
 ```
 
 ## Usage  
-Make sure that the path to caffe_root (-g), images (-p) are correctly designated.  
+Make sure that the path to caffe_root (-c), images (-p) are correctly designated.  
 You should prepare a '.npy' file (-i) contains image filenames in numpy.array.  
 If you use a GPU, set the device ID (-g).
 ```shellsession
-$ python feature_extract.py -i image_filenames.npy -o extracted_features.npy -p images/ -g 0
+$ python feature_extract.py -c caffe/ -i image_filenames.npy -p images/ -g 0
 ```
 
 ## Examples  
