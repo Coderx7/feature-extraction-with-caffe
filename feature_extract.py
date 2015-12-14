@@ -2,7 +2,7 @@ import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument('-c', metavar='path_to_caffe', type=str, default='caffe/',
                     help='path to Caffe')
-parser.add_argument('-p', metavar='path_to_img', type=str, default='',
+parser.add_argument('-p', metavar='path_to_img', type=str, default='images/',
                     help='path to image files')
 parser.add_argument('-i', metavar='image_filenames', type=str, default='filenames.npy',
                     help='npy filename containing image filenames')
