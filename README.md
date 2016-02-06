@@ -47,7 +47,7 @@ If you use a GPU, set the device ID (-g).
 ```
 
 ## Examples  
-* Contour of grid search (SVM)
+* Contour of grid search (SVM)  
 ![Grid Search (SVM)](/examples/svm_gridsearch.png)  
 
 * Classification of Oxford-IIIT Pet Dataset using SVM  
