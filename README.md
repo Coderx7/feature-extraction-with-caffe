@@ -9,11 +9,11 @@ Caffe, Python 2, NumPy, scikit-learn, matplotlib
 Download the [CaffeNet modelfile](https://github.com/BVLC/caffe/tree/master/models/bvlc_reference_caffenet)
 to caffe/models/bvlc_reference_caffenet/ and other dependent files by this script
 ```shellsession
-$ ./data/ilsvrc12/get_ilsvrc_aux.sh
+➜ ./data/ilsvrc12/get_ilsvrc_aux.sh
 ```
 Modify the deploy.prototxt file as following
 ```shellsession
-$ cp models/bvlc_reference_caffenet/deploy.prototxt  
+➜ cp models/bvlc_reference_caffenet/deploy.prototxt  
       models/bvlc_reference_caffenet/deploy_feature.prototxt
 ```
 * deploy_feature.prototxt
@@ -43,7 +43,7 @@ Make sure that the path to caffe_root (-c), images (-p) are correctly designated
 You should prepare a '.npy' file (-i) contains image filenames in numpy.array.  
 If you use a GPU, set the device ID (-g).
 ```shellsession
-$ python feature_extract.py -c caffe/ -p images/ -i image_filenames.npy -g 0
+➜ python feature_extract.py -c caffe/ -p images/ -i image_filenames.npy -g 0
 ```
 
 ## Examples  
