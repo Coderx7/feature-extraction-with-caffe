@@ -15,16 +15,16 @@ Modify the deploy.prototxt file as following
 ```shellsession
 ➜ cp models/bvlc_reference_caffenet/deploy.prototxt  
       models/bvlc_reference_caffenet/deploy_feature.prototxt
+➜ gedit models/bvlc_reference_caffenet/deploy_feature.prototxt
 ```
-* deploy_feature.prototxt
 ```
 # line 152
 layer {
   name: "fc6"
   type: "InnerProduct"
   bottom: "pool5"
-  # top: "fc6"
-  top: "fc6wi"
+  # top: "fc6"    # comment out
+  top: "fc6wi"    # add
   inner_product_param {
     num_output: 4096
   }
@@ -32,8 +32,8 @@ layer {
 layer {
   name: "relu6"
   type: "ReLU"
-  # bottom: "fc6"
-  bottom: "fc6wi"
+  # bottom: "fc6" # comment out
+  bottom: "fc6wi" # add
   top: "fc6"
 }
 ```
