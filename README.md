@@ -1,5 +1,5 @@
 # Feature Extraction with Caffe
-A simple python code of feature extraction with [Caffe](http://caffe.berkeleyvision.org/) refered to [wellflat/cat-fancier](https://github.com/wellflat/cat-fancier/tree/master/classifier)  
+Feature extraction with [Caffe](http://caffe.berkeleyvision.org/)  
 Including some examples classify the [Oxford-IIIT Pet Dataset](http://www.robots.ox.ac.uk/~vgg/data/pets/) using scikit-learn
 
 ## Dependencies
