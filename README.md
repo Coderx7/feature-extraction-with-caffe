@@ -1,5 +1,5 @@
 # Feature Extraction with Caffe
-Feature extraction with [Caffe](http://caffe.berkeleyvision.org/)  
+Image feature extraction with [Caffe](http://caffe.berkeleyvision.org/)  
 Including some examples classify the [Oxford-IIIT Pet Dataset](http://www.robots.ox.ac.uk/~vgg/data/pets/) using scikit-learn
 
 ## Dependencies
